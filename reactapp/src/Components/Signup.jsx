@@ -64,9 +64,6 @@ const Signup = () => {
     setMobileNumber('');
     setPassword('');
     setConfirmPassword('');
-
-
-    // Redirect to Login page after successful signup
     // Redirect to Login after successful signup
 
     navigate('/login');
