@@ -65,7 +65,7 @@ const Signup = () => {
     setPassword('');
     setConfirmPassword('');
 
-    // Redirect to Login after successful signup
+    // Redirect to Login page after successful signup
     navigate('/login');
   };
 
