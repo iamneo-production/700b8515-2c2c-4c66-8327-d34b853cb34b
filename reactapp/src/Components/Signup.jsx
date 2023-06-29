@@ -65,7 +65,10 @@ const Signup = () => {
     setPassword('');
     setConfirmPassword('');
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 70a486a (ok)
     // Redirect to Login after successful signup
     navigate('/login');
   };
@@ -136,4 +139,8 @@ const Signup = () => {
   );
 };
 
+<<<<<<< HEAD
 export default Signup;
+=======
+export default Signup;
+>>>>>>> 70a486a (ok)
