@@ -65,7 +65,11 @@ const Signup = () => {
     setPassword('');
     setConfirmPassword('');
 
+<<<<<<< HEAD
+    // Redirect to Login page after successful signup
+=======
     // Redirect to Login after successful signup
+>>>>>>> ede58ffd01c19ada01631d2f7c14a9ae052a5908
     navigate('/login');
   };
 
