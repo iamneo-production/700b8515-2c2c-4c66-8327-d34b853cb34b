@@ -9,14 +9,16 @@ then
 		cd /home/coder/project/workspace/springapp/;
 		mvn clean test;
     else
-        echo "BE_Add_User FAILED";
-        echo "BE_Add_Policy FAILED";
-        echo "BE_Get_Policy FAILED";
-        echo "BE_Update_Policy FAILED";
+        echo "testGetPolicyAll FAILED";
+        echo "testGetPolicyById FAILED";
+        echo "testCreatePolicy FAILED";
+        echo "test_case1 FAILED";
+        echo "test_case2 FAILED";
     fi
 else
-	echo "BE_Add_User FAILED";
-    echo "BE_Add_Policy FAILED";
-    echo "BE_Get_Policy FAILED";
-    echo "BE_Update_Policy FAILED";
+        echo "testGetPolicyAll FAILED";
+        echo "testGetPolicyById FAILED";
+        echo "testCreatePolicy FAILED";
+        echo "test_case1 FAILED";
+        echo "test_case2 FAILED";
 fi
