@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 .App {
+=======
+#282c34;.App {
+>>>>>>> 3cbbc0cd5ee603892aa270f120c8fba6d5297e17
   text-align: center;
 }
 
@@ -14,7 +18,11 @@
 }
 
 .App-header {
+<<<<<<< HEAD
   background-color: #282c34;
+=======
+  background-color: 
+>>>>>>> 3cbbc0cd5ee603892aa270f120c8fba6d5297e17
   min-height: 100vh;
   display: flex;
   flex-direction: column;
