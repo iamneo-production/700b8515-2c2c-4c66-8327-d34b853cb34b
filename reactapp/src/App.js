@@ -1,6 +1,9 @@
 import logo from './logo.svg';
 import './App.css';
+import './Login.jsx';
+// yes
 
+<<<<<<< HEAD
 function App() {
   return (
     <div className="App">
@@ -25,5 +28,6 @@ function App() {
     </div>
   );
 }
+=======
+>>>>>>> d257bb846a18e54e4ecb3c9122c86c67b973412f
 
-export default App;
