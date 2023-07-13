@@ -2,7 +2,7 @@ import React from 'react'
 import Navbar from '../Navbar'
 export default function Userprofile() {
     const showAlert = () => {
-        alert(" You have successfully applied for an Insurance policy!");
+        alert("Congratulations ! You have successfully applied for an Insurance policy!");
     };
   return (
       <div>
