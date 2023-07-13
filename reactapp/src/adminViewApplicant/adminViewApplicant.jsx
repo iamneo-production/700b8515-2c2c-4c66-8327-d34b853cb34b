@@ -1,6 +1,6 @@
 import React from 'react';
 import { FaTrashAlt, FaEdit } from 'react-icons/fa';
-import Navbar from './Navbar';
+// import Navbar from './Navbar';
 
 const UserAppliedPolicy = () => {
   const applicantDetails = {
