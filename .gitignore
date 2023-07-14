@@ -6,3 +6,8 @@ node_modules/
 
 done
 node_modules/
+
+### testfiles ###
+/puppeteer/
+/react/
+/junit/
