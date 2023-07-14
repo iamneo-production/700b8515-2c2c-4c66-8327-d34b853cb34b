@@ -6,8 +6,11 @@ node_modules/
 
 done
 node_modules/
+<<<<<<< HEAD
 
 ### testfiles ###
 /puppeteer/test.js
 /react/tests/
 /junit/
+=======
+>>>>>>> 3d0a534df461cb5060fca71a48605e2ab973f6ab
