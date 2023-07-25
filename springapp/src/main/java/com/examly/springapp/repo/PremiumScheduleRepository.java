@@ -1,10 +1,10 @@
 package com.examly.springapp.repo;
 
 import org.springframework.data.jpa.repository.JpaRepository;
-import com.examly.springapp.entity.DocumentModel;
 import org.springframework.stereotype.Repository;
+import com.examly.springapp.entity.PremiumScheduleModel;
 
 @Repository
-public interface DocumentRepository extends JpaRepository<DocumentModel, Long> {
+public interface PremiumScheduleRepository extends JpaRepository<PremiumScheduleModel, Integer> {
     // Add any additional repository methods if needed
 }
