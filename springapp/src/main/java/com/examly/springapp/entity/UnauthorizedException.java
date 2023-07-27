@@ -1,0 +1,7 @@
+package com.examly.springapp.entity;
+
+public class UnauthorizedException extends RuntimeException {
+    public UnauthorizedException(String message) {
+        super(message);
+    }
+}
