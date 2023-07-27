@@ -1,0 +1,16 @@
+-------------------------------------------------------------------------------
+Test set: com.examly.springapp.SpringappApplicationTests
+-------------------------------------------------------------------------------
+Tests run: 4, Failures: 3, Errors: 0, Skipped: 0, Time elapsed: 6.258 s <<< FAILURE! - in com.examly.springapp.SpringappApplicationTests
+BE_spring_add_user  Time elapsed: 0.164 s  <<< FAILURE!
+java.lang.AssertionError: Status expected:<200> but was:<302>
+	at com.examly.springapp.SpringappApplicationTests.BE_spring_add_user(SpringappApplicationTests.java:36)
+
+BE_spring_get_policy  Time elapsed: 0.041 s  <<< FAILURE!
+java.lang.AssertionError: Status expected:<200> but was:<404>
+	at com.examly.springapp.SpringappApplicationTests.BE_spring_get_policy(SpringappApplicationTests.java:58)
+
+BE_spring_update_policy  Time elapsed: 0.012 s  <<< FAILURE!
+java.lang.AssertionError: Status expected:<200> but was:<404>
+	at com.examly.springapp.SpringappApplicationTests.BE_spring_update_policy(SpringappApplicationTests.java:72)
+

@@ -65,13 +65,13 @@ public class AdminController {
         // Save the policy
         return policyModelRepository.save(policy);
     }
-
+/*
     @PostMapping("/addPolicy")
     @ResponseStatus(HttpStatus.CREATED)
     public PolicyData addPolicy(@RequestBody PolicyData data) {
         return policyDataRepository.save(data);
     }
-    
+    */
     @PostMapping("/approvePolicy/{applicationId}")
     public InsuranceApplication approvePolicy(@PathVariable Long applicationId) {
         InsuranceApplication application = insuranceApplicationRepository.findById(applicationId)

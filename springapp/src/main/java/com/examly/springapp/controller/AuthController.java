@@ -17,7 +17,6 @@ public class AuthController {
     private UserRepository userRepository;
 
     @PostMapping("/user/signup")// Set the HTTP response status to 201 Created
-    @Secured("permitAll") // Allow unauthenticated access
     public UserModel userSignup(@RequestBody UserModel data) {
         // Set the user role as "user"
         data.setUserRole("user");

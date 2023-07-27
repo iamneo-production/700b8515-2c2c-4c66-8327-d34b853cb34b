@@ -15,6 +15,7 @@
 /home/coder/project/workspace/springapp/src/main/java/com/examly/springapp/controller/PolicyController.java
 /home/coder/project/workspace/springapp/src/main/java/com/examly/springapp/entity/DocumentModel.java
 /home/coder/project/workspace/springapp/src/main/java/com/examly/springapp/entity/PremiumScheduleModel.java
+/home/coder/project/workspace/springapp/src/main/java/com/examly/springapp/config/SecurityConfig.java
 /home/coder/project/workspace/springapp/src/main/java/com/examly/springapp/repo/DocumentRepository.java
 /home/coder/project/workspace/springapp/src/main/java/com/examly/springapp/entity/InsuranceApplication.java
 /home/coder/project/workspace/springapp/src/main/java/com/examly/springapp/controller/UserController.java
