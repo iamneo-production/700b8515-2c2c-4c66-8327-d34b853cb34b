@@ -10,7 +10,11 @@ import com.examly.springapp.repo.PolicyModelRepository;
 import com.examly.springapp.model.DocumentModel;
 import com.examly.springapp.model.InsuranceApplication;
 import com.examly.springapp.model.NotFoundException;
+<<<<<<< HEAD
 import com.examly.springapp.model.Policy;
+=======
+import com.examly.springapp.model.PolicyData;
+>>>>>>> 396399b492c14bb29777d2482d5ff5a788644807
 import com.examly.springapp.model.PolicyModel;
 import com.examly.springapp.model.PremiumScheduleModel;
 import com.examly.springapp.model.UnauthorizedException;

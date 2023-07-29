@@ -5,7 +5,11 @@ import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
 import com.examly.springapp.model.NotFoundException;
+<<<<<<< HEAD
 import com.examly.springapp.model.Policy;
+=======
+import com.examly.springapp.model.PolicyData;
+>>>>>>> 396399b492c14bb29777d2482d5ff5a788644807
 import com.examly.springapp.model.PolicyModel;
 import com.examly.springapp.repo.PolicyDataRepository;
 import com.examly.springapp.repo.PolicyModelRepository;
