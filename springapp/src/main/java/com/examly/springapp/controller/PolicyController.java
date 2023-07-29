@@ -4,11 +4,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
+import com.examly.springapp.model.NotFoundException;
+import com.examly.springapp.model.PolicyData;
+import com.examly.springapp.model.PolicyModel;
 import com.examly.springapp.repo.PolicyDataRepository;
 import com.examly.springapp.repo.PolicyModelRepository;
-import com.examly.springapp.entity.PolicyModel;
-import com.examly.springapp.entity.NotFoundException;
-import com.examly.springapp.entity.PolicyData;
 
 import java.util.List;
 

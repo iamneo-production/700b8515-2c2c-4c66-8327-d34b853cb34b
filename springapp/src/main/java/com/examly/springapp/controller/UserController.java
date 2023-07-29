@@ -2,9 +2,11 @@ package com.examly.springapp.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
+
+import com.examly.springapp.model.NotFoundException;
+import com.examly.springapp.model.UserModel;
 import com.examly.springapp.repo.UserRepository;
-import com.examly.springapp.entity.UserModel;
-import com.examly.springapp.entity.NotFoundException;
+
 import java.util.List;
 
 

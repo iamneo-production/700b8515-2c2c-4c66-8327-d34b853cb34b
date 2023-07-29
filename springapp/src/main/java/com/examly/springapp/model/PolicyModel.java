@@ -1,4 +1,4 @@
-package com.examly.springapp.entity;
+package com.examly.springapp.model;
 
 import javax.persistence.*;
 import lombok.AllArgsConstructor;
@@ -11,25 +11,24 @@ import lombok.Setter;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-@Table(name = "users")
-public class UserModel {
+@Table(name = "insurance_plans")
+public class PolicyModel {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private Long policyId;
 
     private String name;
 
-    private String email;
+    private String description;
 
-    private String password;
+    @Column(name = "coverage_amount")
+    private float coverageAmount;
 
-    @Column(name = "phone_number")
-    private String phoneNumber;
+    private float premium;
 
-    private String address;
-
-    @Column(name = "user_role")
-    private String userRole;
+    @ManyToOne
+    @JoinColumn(name = "created_by")
+    private UserModel createdBy;
 
     // Constructors, getters, and setters
 }
