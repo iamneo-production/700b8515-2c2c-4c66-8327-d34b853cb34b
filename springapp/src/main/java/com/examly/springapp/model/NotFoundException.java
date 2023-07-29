@@ -1,4 +1,4 @@
-package com.examly.springapp.entity;
+package com.examly.springapp.model;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.ResponseStatus;

@@ -4,11 +4,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
+import com.examly.springapp.model.NotFoundException;
+import com.examly.springapp.model.Policy;
+import com.examly.springapp.model.PolicyModel;
 import com.examly.springapp.repo.PolicyDataRepository;
 import com.examly.springapp.repo.PolicyModelRepository;
-import com.examly.springapp.entity.PolicyModel;
-import com.examly.springapp.entity.NotFoundException;
-import com.examly.springapp.entity.PolicyData;
 
 import java.util.List;
 
@@ -26,7 +26,7 @@ public class PolicyController {
 
     @PostMapping("/addPolicy")
     @ResponseStatus(HttpStatus.OK)
-    public PolicyData addPolicy(@RequestBody PolicyData data) {
+    public Policy addPolicy(@RequestBody Policy data) {
         // Set the policyId to null to let JPA generate the value
 
         return policyDataRepository.save(data);
