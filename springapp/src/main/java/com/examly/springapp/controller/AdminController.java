@@ -1,6 +1,11 @@
 package com.examly.springapp.controller;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.MediaType;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.domain.EntityScan;
@@ -10,11 +15,7 @@ import com.examly.springapp.repo.PolicyModelRepository;
 import com.examly.springapp.model.DocumentModel;
 import com.examly.springapp.model.InsuranceApplication;
 import com.examly.springapp.model.NotFoundException;
-<<<<<<< HEAD
 import com.examly.springapp.model.Policy;
-=======
-import com.examly.springapp.model.PolicyData;
->>>>>>> 396399b492c14bb29777d2482d5ff5a788644807
 import com.examly.springapp.model.PolicyModel;
 import com.examly.springapp.model.PremiumScheduleModel;
 import com.examly.springapp.model.UnauthorizedException;
@@ -50,8 +51,8 @@ public class AdminController {
     @Autowired
     private UserRepository userRepository;
 
-    @PostMapping("/createpolicy")
-    public PolicyModel createPolicy(@RequestBody PolicyModel policyModel) {
+    @PostMapping("/policy")
+    public PolicyModel testCreatePolicy(@RequestBody PolicyModel policyModel) {
         PolicyModel policy = new PolicyModel();
 
         // Set data from the request
@@ -139,6 +140,16 @@ public class AdminController {
     public List<Policy> getAllPolicies() {
         return policyDataRepository.findAll();
     }
+    @GetMapping("/policy/{id}")
+    public ResponseEntity<Policy> getPolicyById(@RequestParam String id) {
+    Optional<Policy> policyData = policyDataRepository.findById(id);
+    if (policyData.isPresent()) {
+        return ResponseEntity.ok(policyData.get());
+    } else {
+        return ResponseEntity.notFound().build();
+    }
+}
+
 
     @PutMapping("/editPolicy/{policyId}")
     @ResponseStatus(HttpStatus.OK)
