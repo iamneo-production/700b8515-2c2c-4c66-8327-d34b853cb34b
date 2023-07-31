@@ -1,8 +1,9 @@
 package com.examly.springapp.repo;
 
 import org.springframework.data.jpa.repository.JpaRepository;
-import com.examly.springapp.entity.DocumentModel;
 import org.springframework.stereotype.Repository;
+
+import com.examly.springapp.model.DocumentModel;
 
 @Repository
 public interface DocumentRepository extends JpaRepository<DocumentModel, Long> {

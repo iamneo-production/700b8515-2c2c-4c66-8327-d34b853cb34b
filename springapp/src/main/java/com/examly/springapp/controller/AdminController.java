@@ -1,25 +1,30 @@
 package com.examly.springapp.controller;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.MediaType;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.domain.EntityScan;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 import com.examly.springapp.repo.PolicyModelRepository;
+import com.examly.springapp.model.DocumentModel;
+import com.examly.springapp.model.InsuranceApplication;
+import com.examly.springapp.model.NotFoundException;
+import com.examly.springapp.model.Policy;
+import com.examly.springapp.model.PolicyModel;
+import com.examly.springapp.model.PremiumScheduleModel;
+import com.examly.springapp.model.UnauthorizedException;
+import com.examly.springapp.model.UserModel;
 import com.examly.springapp.repo.DocumentRepository;
 import com.examly.springapp.repo.PremiumScheduleRepository;
 import com.examly.springapp.repo.UserRepository;
 import com.examly.springapp.repo.InsuranceApplicationRepository;
 import com.examly.springapp.repo.PolicyDataRepository;
-import com.examly.springapp.entity.InsuranceApplication;
-import com.examly.springapp.entity.PolicyModel;
-import com.examly.springapp.entity.PremiumScheduleModel;
-import com.examly.springapp.entity.UnauthorizedException;
-import com.examly.springapp.entity.UserModel;
-import com.examly.springapp.entity.DocumentModel;
-import com.examly.springapp.entity.NotFoundException;
-import com.examly.springapp.entity.PolicyData;
 
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.security.core.Authentication;
@@ -27,7 +32,7 @@ import org.springframework.security.core.Authentication;
 
 @RestController
 @RequestMapping("/admin")
-@EntityScan("com.examly.springapp.entity")
+@EntityScan("com.examly.springapp.model")
 @CrossOrigin(origins = "http://localhost:3000")
 public class AdminController {
 
@@ -46,8 +51,8 @@ public class AdminController {
     @Autowired
     private UserRepository userRepository;
 
-    @PostMapping("/createpolicy")
-    public PolicyModel createPolicy(@RequestBody PolicyModel policyModel) {
+    @PostMapping("/policy")
+    public PolicyModel testCreatePolicy(@RequestBody PolicyModel policyModel) {
         PolicyModel policy = new PolicyModel();
 
         // Set data from the request
@@ -132,14 +137,24 @@ public class AdminController {
     private PolicyDataRepository policyDataRepository;
 
     @GetMapping("/policy")
-    public List<PolicyData> getAllPolicies() {
+    public List<Policy> getAllPolicies() {
         return policyDataRepository.findAll();
     }
+    @GetMapping("/policy/{id}")
+    public ResponseEntity<Policy> getPolicyById(@RequestParam String id) {
+    Optional<Policy> policyData = policyDataRepository.findById(id);
+    if (policyData.isPresent()) {
+        return ResponseEntity.ok(policyData.get());
+    } else {
+        return ResponseEntity.notFound().build();
+    }
+}
+
 
     @PutMapping("/editPolicy/{policyId}")
     @ResponseStatus(HttpStatus.OK)
-    public PolicyData editPolicy(@RequestParam String policyId, @RequestBody PolicyData data) {
-        PolicyData policyData = policyDataRepository.findById(policyId)
+    public Policy editPolicy(@RequestParam String policyId, @RequestBody Policy data) {
+        Policy policyData = policyDataRepository.findById(policyId)
                 .orElseThrow(() -> new NotFoundException("Policy not found with ID: " + policyId));
 
         policyData.setPolicytype(data.getPolicytype());

@@ -3,10 +3,11 @@ package com.examly.springapp.controller;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.annotation.Secured;
 import org.springframework.web.bind.annotation.*;
+
+import com.examly.springapp.model.LoginModel;
+import com.examly.springapp.model.UnauthorizedException;
+import com.examly.springapp.model.UserModel;
 import com.examly.springapp.repo.UserRepository;
-import com.examly.springapp.entity.LoginModel;
-import com.examly.springapp.entity.UserModel;
-import com.examly.springapp.entity.UnauthorizedException;
 
 @RestController
 @RequestMapping("/auth")

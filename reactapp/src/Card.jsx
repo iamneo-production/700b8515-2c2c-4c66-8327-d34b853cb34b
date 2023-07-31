@@ -46,3 +46,13 @@ export default function Card(props) {
 }
 Card.propTypes={c1:PropTypes.string};
 Card.defaultProps={c1:'none',c2:'none',id1:'set id1',numberOfYearsPlan:'set numberOfYearsPlan',paddingl:'450px'}
+
+
+
+
+
+
+
+
+
+
