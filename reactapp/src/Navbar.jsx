@@ -12,7 +12,7 @@ export default function Navbar(props) {
                 <div className="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul className="navbar-nav me-auto mb-5 mb-lg-2">
                     <li className="nav-item px-5">
-                        <a className="nav-link" style={{color:'white'}} href="#" >Life Insurance</a>
+                        <button className="nav-link" style={{color:'white'}} id="homeButton">Life Insurance</button>
                     </li>
                     <li className="nav-item px-5">
                         <Link to={props.l1} className="nav-link" style={{color:'white'}} id1={props.id1} >{props.title1}</Link>
