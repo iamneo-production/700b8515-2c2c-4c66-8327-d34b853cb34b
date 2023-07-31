@@ -1,6 +1,6 @@
 import React from 'react'
 import Navbar from '../Navbar'
-import Card from '../Card'
+import Card1 from '../Card1'
 export default function Adminappliedpolicy() {
   return (
     <div>
@@ -8,13 +8,13 @@ export default function Adminappliedpolicy() {
         <div style={{paddingLeft:'350px',border:'2px solid black',backgroundColor:'#c6c1cf'}}>
             <div className="my-5 mx-5 form-floating" style={{fontSize:16,width:'60%',border:'2px solid black'}}>
                 <textarea className="form-control" placeholder="Leave a comment here" id="policyName"></textarea>
-                <label htmlFor="policyName">Type here to search policy</label>
+                <label htmlFor="policyName">Enter Policy id to seach</label>
             </div>
             <div style={{paddingLeft:'430px',fontSize:25}}>
-                <button type="button" className="btn btn-outline-dark btn-lg" style={{color:'white',backgroundColor:'#42618f'}} id="searchPolicy" >Search</button>
+                <button type="button" className="btn btn-outline-dark btn-lg" style={{color:'white',backgroundColor:'#42618f'}} id="searchById" >Search</button>
             </div> 
             <div style={{paddingBottom:'300px'}}>
-                <Card paddingl='10px' c1='inline' l4="/Admineditappliedpolicy"/>
+                <Card1 paddingl='10px' c1='inline' id1='gridApplicants' l5="/Admineditapplicants"/>
             </div>
            
             
